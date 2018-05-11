@@ -2,8 +2,8 @@
 
 file="$(mktemp /tmp/emacs-anywhere.XXXXXXX)"
 
-emacsclient -c -a "" $file
+emacsclient -c -a "" "$file"
 
-cat $file
+pbcopy < "$file"
 
-rm -f $file
+rm -f "$file"
